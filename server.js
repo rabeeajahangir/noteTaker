@@ -1,19 +1,38 @@
 const express = require('express')
 const app = express()
+const fs = require('fs')
+
+
+const saveNote = new 
+
+
+//post a new note
+app.post('/api/notes', (req, res) => {
+    req.body.id = Number((notes.length).toString())
+    const newNote = req.body
+    saveNote(newNote)
+    res.json(newNote)
+});
 
 
 
 
 
-
-
-
-
-
+//notes in json
 app.get('/api/notes', (req, res) => {
     res.json(notes)
 })
-
+//sort by id
+app.get('/notes/:id', (req,res) => {
+    console.log(req.params.id)
+    const result = findId(req.params.id, notes)
+    console.log(result)
+    if(result){
+        res.json(result)
+    } else {
+        res.sendStatus(404)
+    }
+})
 
 
 app.listen(PORT, () => {
