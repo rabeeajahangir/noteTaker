@@ -18,6 +18,12 @@ const saveNote = newNote => {
     return newNote
 }
 
+const findId = (id, notesArr) => {
+    id = Number(id)
+    const result = notesArr.filter(note => note.id === id)
+    return result   
+}
+
 //post a new note
 app.post('/api/notes', (req, res) => {
     req.body.id = Number((notes.length).toString())
