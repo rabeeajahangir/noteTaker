@@ -8,7 +8,15 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 const {notes} = require('./db/db.json')
 
-
+const saveNote = newNote => {
+    console.log(newNote)
+    notes.push(newNote);
+    fs.writeFileSync(
+        path.join(__dirname, './db/db.json'),
+        JSON.stringify({notes}, null, 2)
+    );
+    return newNote
+}
 
 //post a new note
 app.post('/api/notes', (req, res) => {
