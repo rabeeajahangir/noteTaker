@@ -23,8 +23,14 @@ const findId = (id, notesArr) => {
     const result = notesArr.filter(note => note.id === id)
     return result   
 }
-
 //post a new note
+function createNewNote(body, notesArray){
+    console.log(body);
+    // return finished code to post route for response
+  return body;
+}
+
+
 app.post('/api/notes', (req, res) => {
     req.body.id = Number((notes.length).toString())
     const newNote = req.body
