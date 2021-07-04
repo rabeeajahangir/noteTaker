@@ -23,8 +23,30 @@ const findId = (id, notesArr) => {
     const result = notesArr.filter(note => note.id === id)
     return result   
 }
+
+const deleteNote = (id, notes) => {
+    id = Number(id)
+    const deletingNote = notes.filter(note => note.id === id)[0]
+    const index = notes.indexOf(deletingNote)
+    notes.splice(index, 1)
+    fs.writeFileSync(path.join(__dirname, './db/db.json'), JSON.stringify({notes}), null, 2)
+    return notes
+}
+
+//delete a note
+app.delete('/api/notes/:id', (req, res) => {
+    const noteID = req.params.id;
+    const findNote = findId(noteID, notes);
+    if (findNote) {
+      const newNote = deleteNote(noteID, notes);
+      res.json(newNote);
+    } 
+    else {
+      res.sendStatus(404);
+    }
+})
 //post a new note
-function createNewNote(body, notesArray){
+function newNote(body, notesArray){
     console.log(body);
     // return finished code to post route for response
   return body;
