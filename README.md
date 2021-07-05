@@ -31,4 +31,3 @@ Once saved, you can see the note listed on the left side of the page. You can sa
 
 <img width="1440" alt="Screen Shot 2021-07-04 at 11 31 32 PM" src="https://user-images.githubusercontent.com/69980221/124414937-b11c1900-dd21-11eb-8e8a-150bdc81b76e.png">
 
-
