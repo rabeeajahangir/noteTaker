@@ -6,7 +6,8 @@ const path = require('path')
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
-const {notes} = require('./db/db.json')
+const {notes} = require('./db/db')
+
 
 const saveNote = newNote => {
     console.log(newNote)
@@ -46,13 +47,6 @@ app.delete('/api/notes/:id', (req, res) => {
     }
 })
 //post a new note
-function newNote(body, notesArray){
-    console.log(body);
-    // return finished code to post route for response
-  return body;
-}
-
-
 app.post('/api/notes', (req, res) => {
     req.body.id = Number((notes.length).toString())
     const newNote = req.body
@@ -82,10 +76,6 @@ app.get('/notes/:id', (req,res) => {
         res.sendStatus(404)
     }
 })
-
-
-
-
 app.listen(PORT, () => {
-    console.log('API server now on port 3000');
+    console.log(`API server now on port ${PORT}`);
 })
