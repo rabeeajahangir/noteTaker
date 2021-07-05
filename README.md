@@ -1,15 +1,19 @@
 # Note Taker Starter Code
-Purpose:
+**Purpose:**
+
 Note Taker is an app to add notes/reminders throughout the day and to help you keep organized. This application is extremely useful as you can add all kinds of notes on this app and view, edit and delete as per requirement. It is easy to use and adapt to.
 
-Technologies Used:
+**Technologies Used:**
+
 HTML, CSS, JavaScript, Express.js.
 
-How To Access:
+**How To Access:**
+
 URL: https://n0te-takers.herokuapp.com/
 GitHub Repo Link: https://github.com/rabeeajahangir/noteTaker
 
-Functionality:
+**Functionality:**
+
 The main page and attractive and concise. You are encourage to click on 'Get Started' to move into the application.
 <img width="1440" alt="Screen Shot 2021-07-04 at 11 30 26 PM" src="https://user-images.githubusercontent.com/69980221/124414679-2cc99600-dd21-11eb-94d1-193227d16134.png">
 
